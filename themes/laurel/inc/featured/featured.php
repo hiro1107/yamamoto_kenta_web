@@ -3,7 +3,11 @@
 	<div class="sideslides">
 	
 		<div class="bxslider">
-		
+			<div class="slide-item">
+				<a href="https://www.youtube.com/channel/UCWv4QD6t4L_ZbmFLxtIUazA">
+					<div class="feat-item" style="background-image:url(https://yamamoto-kenta.com/wp-content/uploads/2018/10/トップ画像_4.jpg);"></div>
+				</a>
+			</div>
 			<?php
 				// Get featured posts
 				$featured_cat = get_theme_mod( 'laurel_featured_cat' );
@@ -51,8 +55,9 @@
 			?>
 			
 			<div class="slide-item">
-				<div class="feat-item" style="background-image:url(<?php echo $feat_image; ?>);"></div>
-				
+				<a href="<?php echo get_permalink(); ?>">
+					<div class="feat-item" style="background-image:url(<?php echo $feat_image; ?>);"></div>
+				</a>
 				<?php if(get_theme_mod( 'laurel_featured_slider_hide_cat' ) && get_theme_mod( 'laurel_featured_slider_hide_title' ) && get_theme_mod( 'laurel_featured_slider_hide_excerpt' ) && get_theme_mod( 'laurel_featured_slider_hide_button' )) : else : ?>
 				<div class="feat-overlay">
 					<?php if(!get_theme_mod( 'laurel_featured_slider_hide_cat' )) : ?><span class="cat"><?php the_category('<span>&#8226;</span> '); ?></span><?php endif; ?>
@@ -65,7 +70,6 @@
 					<?php endif; ?>
 				</div>
 				<?php endif; ?>
-				
 			</div>
 			
 			<?php endwhile; endif; ?>

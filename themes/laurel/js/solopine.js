@@ -35,8 +35,8 @@ jQuery(document).ready(function($) {
 		mode: 'fade',
 		pager: false,
 		/*auto: ($(".bxslider div.slide-item").length > 1) ? true: false,*/
-		auto: false,
-		pause: 7000,
+		auto: true,
+		pause: 2000,
 		nextText: '<i class="fa fa-angle-right"></i>',
 		prevText: '<i class="fa fa-angle-left"></i>',
 		onSliderLoad: function(){
